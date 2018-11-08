@@ -18,8 +18,8 @@ class DesksController < ApplicationController
 
     if @desk.save
       redirect_to @desk, notice: 'Desk was successfully created.'
-    else notice 'Desk was not successfully created.'  
-    end  
+    else notice 'Desk was not successfully created.'
+    end
   end
 
   def destroy
@@ -27,8 +27,8 @@ class DesksController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_desk
-      @desk = Desk.find_by(token: params[:token])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_desk
+    @desk = Desk.find_by(token: params[:token])
+  end
 end

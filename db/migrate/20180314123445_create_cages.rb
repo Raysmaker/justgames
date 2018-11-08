@@ -1,4 +1,4 @@
-class CreateCages < ActiveRecord::Migration[5.1]
+class CreateCages < ActiveRecord::Migration[5.2]
   def change
     create_table :cages do |t|
       t.references :desk, foreign_key: true

@@ -4,7 +4,7 @@
   }
 </script>
 
-<div class="row no-gutters">
+<div class="row no-gutters">ИГРА &nbsp;
   <div class="col-1 justify-content-start"><h5>Desk <%= @desk.id %> |</h5></div>
   <div class="col-1 justify-content-start"><%= link_to "Back", root_path %></div>
 </div>
@@ -19,7 +19,7 @@
             <div id=<%= id_cage %> class="box" ondragover="allowDrop(event)">
               <% @cage = @cages.find_by(board_id: id_cage) %>
               <% if @cage %>
-                <%= image_tag @cage.img_name, draggable: true, id: @cage.img_id, size: "90x90" %> 
+                <%= image_tag @cage.img_name, draggable: true, id: @cage.img_id, size: "90x90" %>
               <% end %>
             </div>
           <% } %>

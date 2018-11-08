@@ -4,5 +4,9 @@
   }
 </script>
 
-<li><b>Desk #<%= desk.id %> - <%= desk.game_name %> created by <%= desk.user.nickname %></b> — 
-                                       <a onclick="load_desk(<%= "'#{desk.token}'" %>)" href="">Open</a> </li>
+<li>
+  <b>Desk #<%= desk.id %> -
+  <%= desk.game_name %> created by <%= desk.user.nickname %>
+  </b> —
+  <a onclick="load_desk(<%= "'#{desk.token}'" %>)" href="">Open</a>
+</li>
