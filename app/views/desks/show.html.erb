@@ -1,6 +1,6 @@
 <script>
   function allowDrop(ev) {
-      ev.preventDefault();
+    ev.preventDefault();
   }
 </script>
 
@@ -9,17 +9,41 @@
   <div class="col-1 justify-content-start"><%= link_to "Back", root_path %></div>
 </div>
 
-<div class="row no-gutters">
+<div class="row no-guttersNOT">
   <div class="col-lg-9 col-md-12 mb-4">
+   
     <div id="board">
+
+      <div class="col-md-12 ml-3">
+        <div class="char-cage">A</div> 
+        <div class="char-cage">B</div> 
+        <div class="char-cage">C</div> 
+        <div class="char-cage">D</div> 
+        <div class="char-cage">E</div> 
+        <div class="char-cage">F</div> 
+        <div class="char-cage">G</div> 
+        <div class="char-cage">H</div> 
+      </div>
+
+      <div class="col-md-1 mt-2 float-left">
+        <div class="numb-cage">8</div> 
+        <div class="numb-cage">7</div>
+        <div class="numb-cage">6</div>
+        <div class="numb-cage">5</div>
+        <div class="numb-cage">4</div>
+        <div class="numb-cage">3</div>
+        <div class="numb-cage">2</div>
+        <div class="numb-cage">1</div>
+      </div>
+
       <div id="gamefield">
-        <% [8,7,6,5,4,3,2,1].each { |i|  %>
-          <% %w(a b c d e f g h).each { |l| %>
+        <% [8,7,6,5,4,3,2,1].each { |i| %>
+          <% %w(a b c d e f g h).each { |l| %>   
             <% id_cage = "#{l}#{i}" %>
-            <div id=<%= id_cage %> class="box" ondragover="allowDrop(event)">
-              <% @cage = @cages.find_by(board_id: id_cage) %>
+              <div id=<%= id_cage %> class="dark-cage cages" ondragover="allowDrop(event)">
+              <%@cage = @cages.find_by(board_id: id_cage) %>
               <% if @cage %>
-                <%= image_tag @cage.img_name, draggable: true, id: @cage.img_id, size: "90x90" %>
+                <%= image_tag @cage.img_name, draggable: true, id: @cage.img_id, size: "80x80", class: "img" %>
               <% end %>
             </div>
           <% } %>
@@ -50,6 +74,5 @@
       </div>   
   </div>
 </div>
-
 
 <p id="notice"><%= notice %></p>

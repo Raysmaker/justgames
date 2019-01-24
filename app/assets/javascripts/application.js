@@ -15,12 +15,13 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require board
 //= require_tree .
 
 $(function() {
-    console.log('Document is loaded');
+    // console.log('Document is loaded');
 });
 
 $(document).on("turbolinks:load", function() {
-    console.log('Document is loaded (turbolinks:load)');
+    // console.log('Document is loaded (turbolinks:load)');
 })

@@ -1,10 +1,12 @@
 div#board {
   position: relative;
   float: left;
-  width: 778px;
+  width: 779px;
   height: 779px;
-  margin: auto;
-  background: url("board.png") no-repeat;
+  margin: 0 auto;
+  /*background: url("board.png") no-repeat;*/
+  /*background-color: #F4A460;*/
+  border: 1px solid #000;
 }
 
 div#gamefield {
@@ -12,22 +14,60 @@ div#gamefield {
   width: 728px;
   height: 728px;
   margin-left: 32px;
-  margin-top:  31px;
+  margin-top:  32px;
+  background-color: "green";
+  border: 1px solid #000;
 }
 
-.box {
-    float: left;
-    width: 90px;
-    height: 90px;
+.img{}
+
+.char-cage{
+  float: left;
+  width: 90px;
+  padding: 5px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.numb-cage{
+  height: 90px;
+  width: 18px;
+  padding-top: 35px;
+  background-color: #fff;
+  /*border: 1px solid #000;*/
+}
+
+.dark-cage {
+  float: left;
+  width: 90px;
+  height: 90px;
+  background: #707;
+  border: 0px solid #f00;
+   -ms-user-select: none; 
+   -moz-user-select: none; 
+   -webkit-user-select: none; 
+    user-select: none; 
+}
+
+.light-cage{
+  float: left;
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  border: 0px solid #ff0;
+   -ms-user-select: none; 
+   -moz-user-select: none; 
+   -webkit-user-select: none; 
+    user-select: none; 
 }
 
 .footer {
-   position: fixed;
-   bottom: 0;
-   width: 1110px;
+  position: fixed;
+  bottom: 0;
+  width: 1110px;
 }
 
-.no-gutters {
+/*.no-gutters {
   margin-right: 0;
   margin-left: 0;
 
@@ -36,4 +76,4 @@ div#gamefield {
     padding-right: 0;
     padding-left: 0;
   }
-}
+}*/
