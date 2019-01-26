@@ -40,15 +40,18 @@
         <% [8,7,6,5,4,3,2,1].each { |i| %>
           <% %w(a b c d e f g h).each { |l| %>   
             <% id_cage = "#{l}#{i}" %>
-              <div id=<%= id_cage %> class="dark-cage cages" ondragover="allowDrop(event)">
+              <div id=<%= id_cage %> class="cages" ondragover="allowDrop(event)">
               <%@cage = @cages.find_by(board_id: id_cage) %>
               <% if @cage %>
-                <%= image_tag @cage.img_name, draggable: true, id: @cage.img_id, size: "80x80", class: "img" %>
+                <%= image_tag @cage.img_name, draggable: true, id: @cage.img_id, size: "90x90", class: "img" %>
               <% end %>
             </div>
           <% } %>
         <% } %>
-      </div>  
+      </div>
+
+
+
     </div> 
   </div>
 

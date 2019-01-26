@@ -37,7 +37,7 @@ div#gamefield {
   /*border: 1px solid #000;*/
 }
 
-.dark-cage {
+.cage-dark {
   float: left;
   width: 90px;
   height: 90px;
@@ -49,11 +49,11 @@ div#gamefield {
     user-select: none; 
 }
 
-.light-cage{
+.cage-light{
   float: left;
   width: 90px;
   height: 90px;
-  background: #fff;
+  background: #ffE;
   border: 0px solid #ff0;
    -ms-user-select: none; 
    -moz-user-select: none; 
@@ -66,14 +66,3 @@ div#gamefield {
   bottom: 0;
   width: 1110px;
 }
-
-/*.no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-
-  > .col,
-  > [class*="col-"] {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}*/
