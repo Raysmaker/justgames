@@ -1,13 +1,12 @@
 div#board {
   position: relative;
-  float: left;
-  width: 779px;
-  height: 779px;
+  width: 770px;
+  height: 770px;
   margin: 0 auto;
-  /*background: url("board.png") no-repeat;*/
-  /*background-color: #F4A460;*/
   border: 1px solid #000;
+  border-radius: 5px;
 }
+
 
 div#gamefield {
   position: absolute;
@@ -15,26 +14,34 @@ div#gamefield {
   height: 728px;
   margin-left: 32px;
   margin-top:  32px;
-  background-color: "green";
-  border: 1px solid #000;
+  border: 0px solid #000;
 }
 
-.img{}
+.figure-img{
+  width: 90px;
+  height: 90px;
+}
 
-.char-cage{
+.cage-char{
   float: left;
   width: 90px;
-  padding: 5px;
   background-color: #fff;
   text-align: center;
+  -ms-user-select: none; 
+  -moz-user-select: none; 
+  -webkit-user-select: none; 
+   user-select: none; 
 }
 
-.numb-cage{
+.cage-number{
   height: 90px;
   width: 18px;
   padding-top: 35px;
   background-color: #fff;
-  /*border: 1px solid #000;*/
+  -ms-user-select: none; 
+  -moz-user-select: none; 
+  -webkit-user-select: none; 
+   user-select: none; 
 }
 
 .cage-dark {
@@ -43,10 +50,10 @@ div#gamefield {
   height: 90px;
   background: #707;
   border: 0px solid #f00;
-   -ms-user-select: none; 
-   -moz-user-select: none; 
-   -webkit-user-select: none; 
-    user-select: none; 
+  -ms-user-select: none; 
+  -moz-user-select: none; 
+  -webkit-user-select: none; 
+   user-select: none; 
 }
 
 .cage-light{
@@ -55,10 +62,10 @@ div#gamefield {
   height: 90px;
   background: #ffE;
   border: 0px solid #ff0;
-   -ms-user-select: none; 
-   -moz-user-select: none; 
-   -webkit-user-select: none; 
-    user-select: none; 
+  -ms-user-select: none; 
+  -moz-user-select: none; 
+  -webkit-user-select: none; 
+   user-select: none; 
 }
 
 .footer {

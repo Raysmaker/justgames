@@ -5,7 +5,6 @@ function addClassDark(i) { elems[i].classList.add('cage-dark')  };
 
 window.onload = function(){
   for (let i=0; i < 64; i++){
-
     if (i % 2 == 0){
       }else if (i <  8){ addClassDark(i);
       }else if (i < 16){ addClassLight(i);
