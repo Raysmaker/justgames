@@ -14,7 +14,7 @@ div#gamefield {
   height: 728px;
   margin-left: 32px;
   margin-top:  32px;
-  border: 0px solid #000;
+  border: 1px solid #000;
 }
 
 .figure-img{
@@ -25,6 +25,7 @@ div#gamefield {
 .cage-char{
   float: left;
   width: 90px;
+  padding-top:2px;
   background-color: #fff;
   text-align: center;
   -ms-user-select: none; 
@@ -36,8 +37,7 @@ div#gamefield {
 .cage-number{
   height: 90px;
   width: 18px;
-  padding-top: 35px;
-  background-color: #fff;
+  padding-top: 30px;
   -ms-user-select: none; 
   -moz-user-select: none; 
   -webkit-user-select: none; 

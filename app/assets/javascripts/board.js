@@ -1,10 +1,33 @@
+window.onload = function(){ 
+
+// ----------------------------------------------------------
+function cageChar(){
+  let chars = ["A", "B", "C", "D", "E", "F", "G", "H"];
+  let char = document.getElementsByClassName('cage-char')[0];
+  for (var i = 0; i < chars.length; i++){
+      char.insertAdjacentHTML('beforeBegin', "<div class='cage-char'>" + chars[i] + "</div>" );
+  }
+}
+
+function cageNumber(){
+  let numbers = [8, 7, 6, 5, 4, 3, 2, 1];
+  let number = document.getElementsByClassName('cage-number')[0];
+  for (var i = 0; i < 8; i++){
+    number.insertAdjacentHTML('beforeBegin', "<div class='cage-number'>" + numbers[i] + "</div>" );
+  }
+}
+  
+cageChar();
+cageNumber();
+// ----------------------------------------------------------
+
+
 var elems = document.getElementsByClassName('cages');
 
 function addClassLight(i){ elems[i].classList.add('cage-light') };
 function addClassDark(i) { elems[i].classList.add('cage-dark')  };
 
-window.onload = function(){
-  for (let i=0; i < 64; i++){
+for (var i=0; i < 64; i++){
     if (i % 2 == 0){
       }else if (i <  8){ addClassDark(i);
       }else if (i < 16){ addClassLight(i);

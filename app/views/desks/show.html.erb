@@ -1,7 +1,5 @@
 <script>
-  function allowDrop(ev) {
-    ev.preventDefault();
-  }
+  function allowDrop(event) { event.preventDefault() };
 </script>
 
 <div class="row no-gutters">ИГРА &nbsp;
@@ -13,26 +11,12 @@
   <div class="col-lg-9 col-md-12 mb-4">
    
     <div id="board">
+      
       <div class="col-md-12 ml-3">
-        <div class="cage-char">A</div> 
-        <div class="cage-char">B</div> 
-        <div class="cage-char">C</div> 
-        <div class="cage-char">D</div> 
-        <div class="cage-char">E</div> 
-        <div class="cage-char">F</div> 
-        <div class="cage-char">G</div> 
-        <div class="cage-char">H</div> 
+        <div class="cage-char" style="display:none;"></div>
       </div>
-
       <div class="col-md-1 mt-2 float-left">
-        <div class="cage-number">8</div> 
-        <div class="cage-number">7</div>
-        <div class="cage-number">6</div>
-        <div class="cage-number">5</div>
-        <div class="cage-number">4</div>
-        <div class="cage-number">3</div>
-        <div class="cage-number">2</div>
-        <div class="cage-number">1</div>
+        <div class="cage-number" style="display:none;"></div> 
       </div>
 
       <div id="gamefield">
@@ -40,7 +24,7 @@
           <% %w(a b c d e f g h).each { |l| %>
             <% id_cage = "#{l}#{i}" %>
             <div id=<%= id_cage %> class="cages" ondragover="allowDrop(event)">
-              <%@cage = @cages.find_by(board_id: id_cage) %>
+              <% @cage = @cages.find_by(board_id: id_cage) %>
               <% if @cage %>
                 <%= image_tag @cage.img_name, id: @cage.img_id,  class: "figure-img", draggable: true %>
               <% end %>
